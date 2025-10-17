@@ -1,5 +1,6 @@
 using ASPNETCoreIdentityDemo.Data;
 using ASPNETCoreIdentityDemo.Models;
+using ASPNETCoreIdentityDemo.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,14 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     options.User.RequireUniqueEmail = true;
 })
     .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();    
+    .AddDefaultTokenProviders();
+
+
+// Register your custom services
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

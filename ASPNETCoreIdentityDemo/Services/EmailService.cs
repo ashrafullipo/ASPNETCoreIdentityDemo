@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace ASPNETCoreIdentityDemo.Services
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
         public EmailService(IConfiguration configuration)

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ASPNETCoreIdentityDemo.Services
 {
-    public class AccountService
+    public class AccountService : IAccountService
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
