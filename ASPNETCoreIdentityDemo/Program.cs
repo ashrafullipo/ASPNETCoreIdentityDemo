@@ -1,4 +1,5 @@
 using ASPNETCoreIdentityDemo.Data;
+using ASPNETCoreIdentityDemo.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => 
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options => 
 {
     options.Password.RequireDigit = true;
     options.Password.RequiredLength = 8;

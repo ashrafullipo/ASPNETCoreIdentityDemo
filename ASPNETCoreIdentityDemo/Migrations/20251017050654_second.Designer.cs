@@ -4,6 +4,7 @@ using ASPNETCoreIdentityDemo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNETCoreIdentityDemo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251017050654_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,7 +108,7 @@ namespace ASPNETCoreIdentityDemo.Migrations
                         new
                         {
                             Id = new Guid("c8d89a25-4b96-4f20-9d79-7f8a54c5213d"),
-                            ConcurrencyStamp = "11111111-1111-1111-1111-111111111111",
+                            ConcurrencyStamp = "48fee53c-8caa-4568-83d4-1a0092d344d9",
                             CreatedOn = new DateTime(2025, 10, 17, 10, 35, 0, 0, DateTimeKind.Utc),
                             Description = "Administrator role with full access permissions",
                             IsActive = true,
@@ -116,7 +119,7 @@ namespace ASPNETCoreIdentityDemo.Migrations
                         new
                         {
                             Id = new Guid("b92f0a3e-573b-4b12-8db1-2ccf6d58a34a"),
-                            ConcurrencyStamp = "22222222-2222-2222-2222-222222222222",
+                            ConcurrencyStamp = "9afa55a1-9c74-482a-9c54-a33e49c4b075",
                             CreatedOn = new DateTime(2025, 10, 17, 10, 35, 0, 0, DateTimeKind.Utc),
                             Description = "Standard user role with limited access",
                             IsActive = true,
@@ -127,7 +130,7 @@ namespace ASPNETCoreIdentityDemo.Migrations
                         new
                         {
                             Id = new Guid("d7f4a42e-1c1b-4c9f-8a50-55f6b234e8e2"),
-                            ConcurrencyStamp = "33333333-3333-3333-3333-333333333333",
+                            ConcurrencyStamp = "5802e62b-060a-44fd-80ac-d2b5882106b6",
                             CreatedOn = new DateTime(2025, 10, 17, 10, 35, 0, 0, DateTimeKind.Utc),
                             Description = "Manager role with extended management privileges",
                             IsActive = true,
@@ -138,7 +141,7 @@ namespace ASPNETCoreIdentityDemo.Migrations
                         new
                         {
                             Id = new Guid("f2e6b8a1-9d43-4a7c-9f32-71d7c5dbe9f0"),
-                            ConcurrencyStamp = "44444444-4444-4444-4444-444444444444",
+                            ConcurrencyStamp = "c6fbf7eb-c046-4c96-840d-326f9d93c4ec",
                             CreatedOn = new DateTime(2025, 10, 17, 10, 35, 0, 0, DateTimeKind.Utc),
                             Description = "Guest role with read-only access",
                             IsActive = true,
